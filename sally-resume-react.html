@@ -5,6 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sally Student React Resume</title>
+    <style>
+        header {
+            text-align: center;
+        }
+
+        .italics {
+            font-style: italic;
+            margin-top: -10px;
+            font-size: 18px;
+        }
+
+        body {
+            padding: 20px;
+            border: solid 5px #fff;
+            background-color:#faecd1;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .job {
+            margin-top: -5px;
+        }
+
+        span {
+            float:right;
+        }
+
+        h2 {
+            text-decoration: underline;
+            font-size: 22px;
+        }
+
+        li {
+            margin-top: -10px;
+            font-size: 18px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        address {
+            font-size: 20px;
+            font-style: normal;
+        }
+    </style>
 </head>
 <body>
     <div id="application-root"></div>
@@ -22,6 +67,7 @@
 
     function App(props) {
         return (
+            <div>
             <header>
                  <h1>Sally Student</h1>
                  <img src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg"
@@ -35,7 +81,33 @@
                 </address>
             </header>
 
-            <main></main>
+            <main>
+                <section>
+                    <h2>Education</h2>
+                    <p className="italics">University of Arizona<span>2014-2018</span></p>
+                        <ul>
+                        <li>Graduated May 2018 with Bachelors of Science in Business Administration</li>
+                        </ul>
+
+                    <h2>Work Experience</h2>
+                    <div className="job">
+                        <h3>Apple</h3>
+                        <p className="italics">Technical Recruiter<span>2019</span></p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                        </ul>
+                    </div>
+
+                    <div className="job">
+                        <h3>Google</h3>
+                        <p className="italics">Intern<span>2018</span></p>
+                        <ul>
+                            <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+            </div>
         );
     }
 
